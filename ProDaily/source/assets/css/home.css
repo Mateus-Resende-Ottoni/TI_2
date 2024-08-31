@@ -1,0 +1,49 @@
+main {
+    background-color: var(--lightest-Green);
+
+    height: 100vh;
+
+    padding-left: 5%;
+
+    margin-left: 1%;
+}
+
+.texto_home {
+    position: relative;
+    z-index: 10;
+}
+
+.texto_home h1 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 40.5vh;
+
+    line-height: 0;
+
+    color: var(--dark-Green);
+
+    text-shadow: 00px 00px 15px white, 02px 02px 12px white, -2px -2px 12px white;
+
+}
+
+.texto_home h1:nth-of-type(1) {
+    padding-top: 41.5vh;
+}
+
+.texto_home h1:nth-of-type(2) {
+    padding-top: 30.5vh;
+}
+
+.image_home {
+    z-index: 0;
+}
+
+.image_home img {
+    position: fixed;
+    top: 0;
+    right: 3vw;
+
+    height: 110%;
+    width: 60%;
+    min-width: 650px;
+}
