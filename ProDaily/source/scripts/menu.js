@@ -15,8 +15,8 @@ $(document).ready(function () {
 
     $('#side_menu').css("display", "none");
 
-    //localStorage.clear();
     $('.side_menu_button').click(menu);
 
-    
+    $("#login_button").click(menu);
+
 })

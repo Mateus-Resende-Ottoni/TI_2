@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ProDaily - Home</title>
 
     <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/login_iframe.css">
     <link rel="stylesheet" href="./assets/css/colors.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
 
@@ -19,6 +20,7 @@
 
     <script src="./scripts/jquery-3.7.1.min.js"></script>
     <script src="./scripts/menu.js"></script>
+    <script src="./scripts/login_Iframe.js"></script>
 
 </head>
 
@@ -64,11 +66,11 @@
                 </div>
 
                 <div class="side_menu_item">
-                    <a href="#"><button>
+                    <button id="login_button">
                             <i class="fa-regular fa-user"></i>
                             <p>Login</p>
-                        </button>
-                    </a>
+                    </button>
+                    
                 </div>
 
             </section>
@@ -88,6 +90,11 @@
         </div>
 
     </main>
+
+    <div id="the_login_iframe">
+        <button><i class="fa-solid fa-x"></i></button>
+        <iframe src="login.html" id="login_iframe"></iframe>
+    </div>
 
 
 </body>

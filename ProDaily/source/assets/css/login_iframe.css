@@ -1,0 +1,67 @@
+
+
+
+
+
+#the_login_iframe {
+    display: none;
+    width: 80%;
+    height: 63.5%;
+    position: absolute;
+    top: 9vh;
+    left: 12.5%;
+
+    z-index: 100;
+
+
+}
+
+#the_login_iframe button{
+    display: block;
+    z-index: 125;
+
+    position: absolute;
+    top: 3.5vh;
+    left: 82%;
+    
+    font-size: 3vw;
+
+    padding: 0.75vh 1.75vw;
+
+    border-radius: 100px;
+    border: none;
+
+    cursor: pointer;
+
+    background-color: rgba(255, 255, 255, 0.25);
+    color: rgba(0, 0, 0, 0.4);
+
+    box-shadow: 0px 2px 15px var(--lightest-Green);
+}
+
+#the_login_iframe button:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: var(--dark-Green);
+}
+
+#the_login_iframe button i{
+    cursor: pointer;
+}
+
+#the_login_iframe iframe {
+    display: block;
+    width: 85%;
+    height: 120%;
+    z-index: 126;
+
+    background-color: var(--light-Green);
+
+    border: groove 5px var(--mid-Green);
+    border-radius: 25px;
+
+    margin-top: 1vh;
+    margin-left: 7.35%;
+
+    box-shadow: 00px 00px 20px var(--dark-Green);
+}
+
