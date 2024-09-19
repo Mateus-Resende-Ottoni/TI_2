@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <meta content="text/html; charset = UTF-8" http-equiv="content-type">
+
+    <title>Personagens: Stardew Valley</title>
+    <link rel="stylesheet" href="/assets/form.css">
+    <link rel="stylesheet" href="assets/form.css">
+</head>
+
+<script type="text/javascript">
+
+    function updateAction_Consultar() {
+
+        let valor = parseInt(document.getElementById("consultar_input").value, 10);
+
+        document.getElementById("consultar_form").setAttribute("action", "http://localhost:6789/character/" + valor);
+
+    }
+
+    function updateAction_Remover() {
+
+        let valor = parseInt(document.getElementById("remover_input").value, 10);
+
+        document.getElementById("remover_form").setAttribute("action", "http://localhost:6789/character/delete/" + valor);
+
+    }
+
+    function confirmarDeletePersonagem(id, name, lives_in, address, birthday) {
+
+        if (confirm('Confirmar a exclusão do personagem [' + name + '] (ID ' + id + '), mora em ' + lives_in + ', ' + address + ' e faz aniversário em ' + birthday)) {
+            location.href = '/character/delete/' + id;
+        }
+    }
+    function onLoad() {
+        if (document.getElementById("msg").value != "") {
+            alert(document.getElementById("msg").value);
+        }
+
+
+    }
+</script>
+
+
+<body onload="onLoad()">
+    <h1 class="titulo">Personagens: Stardew Valley</h1>
+
+    <section class="section--container__responsive">
+
+        <section class="section--mainrow__responsive first--section">
+            <h1 class="generaltext">Inserir Personagem</h1>
+            <form class="form--register" action="http://localhost:6789/character/insert" method="post" id="form-add">
+                <p>Nome:</p>
+                <input class="input--register" type="text" name="name" value="" placeholder="nome do personagem">
+                <p>Lives in:</p>
+                <input class="input--register" type="text" name="lives_in" value="" placeholder="Pelican Town,">
+                <p>Address:</p>
+                <input class="input--register" type="text" name="address" value="" placeholder="[Rua] [Numero]">
+                <p>Birthday</p>
+                <input class="input--register" type="text" name="birthday" value="" placeholder="[Estação] [Dia]">
+                <input type="submit" value="cadastrar" class="input--button cadastrar green">
+            </form>
+
+        </section>
+
+    </section>
+
+    <section class="section--container__responsive">
+        <section class="section--row__responsive first">
+            <h1 class="generaltext">Detalhar Personagem</h1>
+            <form action="http://localhost:6789/character/" method="get" id="consultar_form">
+                <input class="input--register" type="number" name="id" value="" placeholder="id do personagem"
+                    id="consultar_input">
+                <input type="submit" value="consultar" class="input--button consultar"
+                    onclick="updateAction_Consultar()">
+            </form>
+        </section>
+        <section class="section--row__responsive second">
+            <h1 class="generaltext">Remover Personagem</h1>
+            <form action="http://localhost:6789/character/delete/" method="get" id="remover_form">
+                <input class="input--register" type="number" name="id" value="" placeholder="id do personagem"
+                    id="remover_input">
+                <input type="submit" value="remover" class="input--button remover" onclick="updateAction_Remover()">
+            </form>
+        </section>
+        <section class="section--row__responsive third">
+            <h1 class="generaltext">Listar Personagem</h1>
+            <form action="http://localhost:6789/character/list/1" method="get">
+                <input type="submit" value="todos" class="input--button todos">
+            </form>
+        </section>
+
+    </section>
+
+    <section class="section--container__responsive">
+
+        <input type="hidden" id="msg" name="msg" value="">
+        <UM-PERSONAGEM>
+        
+
+        <br>
+
+        <LISTAR-PERSONAGEM>
+        
+
+    </section>
+
+</body>
+
+
+
+</html>

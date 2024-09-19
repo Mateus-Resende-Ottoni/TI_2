@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(fundo.png);
+	background-size: 250%;
+	background-position: 50%;
+}
+
+
+h1.titulo {
+	margin-top: 5vh;
+
+	color: black;
+	text-shadow: 01px 01px 04px white;
+	font-size: 4.5vw;
+	text-align: center;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+/* Seções Início */
+
+.section--container__responsive {
+	display: grid;
+	column-gap: 0.25vw;
+	grid-template-columns: 5;
+
+	padding: 1vh 1vw;
+	background-color: rgba(255, 255, 255, 0.600);
+
+	margin-bottom: 1vh;
+
+	border-radius: 10px;
+	border-color: black;
+	border-style: dashed;
+}
+
+.section--mainrow__responsive {
+	grid-column: 1/ 6;
+}
+
+.first {
+	grid-column: 2;
+}
+
+.second {
+	grid-column: 3;
+}
+
+.third {
+	grid-column: 4;
+}
+
+
+/* Seções fim */
+
+.input--button {
+	font-weight: bold;
+	font-family: Arial;
+	font-size: medium;
+	color: white;
+
+	border-color: transparent;
+
+	margin-top: 1vh;
+
+	box-shadow: 01px 02px 10px 02px black;
+
+	cursor: pointer;
+}
+
+.cadastrar {
+	display: block;
+	margin: 1vh auto;
+	margin-bottom: 10px;
+}
+
+.green {
+	background-color: #00FF00;
+}
+
+.consultar, .todos {
+	background-color: #0000ff;
+}
+
+.remover {
+	background-color: #ff0000;
+}
+
+.input--register {
+	display: inline;
+}
+
+input {
+	display: block;
+	border-radius: 7px;
+	padding: 10px;
+	border-style: solid;
+	border-color: lightgray;
+	color: black;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+form p {
+	text-align: initial;
+	display: inline;
+	margin-left: 15px;
+}
+
+.p--nomargin {
+	margin-left: 0px;
+	margin-right: 10px;
+}
+
+.section--mainrow__responsive .generaltext {
+	text-align: center;
+}
